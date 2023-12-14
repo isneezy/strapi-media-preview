@@ -30,10 +30,15 @@
     "@strapi/design-system": "^1.6.3",
     "@strapi/helper-plugin": "^4.6.0",
     "@strapi/icons": "^1.6.3",
+    "fs-extra": "^11.2.0",
+    "lodash": "^4.17.21",
+    "pdf-to-img": "^2.1.2",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@strapi/typescript-utils": "^4.6.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.4",
     "@types/react": "^17.0.53",
     "@types/react-dom": "^18.0.28",
     "@types/react-router-dom": "^5.3.3",
@@ -55,7 +60,7 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "name": "strapi-media-preview",
+    "name": "media-preview",
     "displayName": "Media Preview",
     "description": "A custom field that automatically generates thumbnails for uploaded PDF documents, Excel sheets, Word documents, and videos.",
     "kind": "plugin"
