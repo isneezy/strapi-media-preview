@@ -1,7 +1,6 @@
 {
   "name": "@isneezy/strapi-media-preview",
   "version": "1.0.1",
-  "private": false,
   "description": "A custom field for strapi that automatically generates thumbnails for uploaded PDF documents, Excel sheets, Word documents, and videos",
   "keywords": [
     "strapi",
@@ -66,5 +65,18 @@
     "displayName": "Media Preview",
     "description": "A custom field that automatically generates thumbnails for uploaded PDF documents, Excel sheets, Word documents, and videos.",
     "kind": "plugin"
+  },
+  "files": [
+    "admin",
+    "dist/server",
+    "custom.d.ts",
+    "package.json",
+    "README.md",
+    "strapi-admin.js",
+    "strapi-server.js",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
