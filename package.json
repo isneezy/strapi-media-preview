@@ -1,6 +1,6 @@
 {
   "name": "@isneezy/strapi-media-preview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A custom field for strapi that automatically generates thumbnails for uploaded PDF documents, Excel sheets, Word documents, and videos",
   "keywords": [
     "strapi",
