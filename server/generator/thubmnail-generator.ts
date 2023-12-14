@@ -7,6 +7,7 @@ import fs from 'fs'
 import fsAsync from 'fs/promises'
 import path from "path"
 import _ from "lodash"
+import logger from "../logger"
 
 async function ensureTmpWorkingDirectory(fileData: FileType): Promise<boolean> {
     // create and assign a temporary working directory
@@ -25,9 +26,9 @@ async function ensureGetStream(fileData: FileType) {
         fileData.getStreamAsync = () => streamPromise
     }
     if (fileData.provider === 'local') {
-        const config = strapi.config.get('server') as Record<string, any>
-        const relativePathToFile = path.join(config.dirs.public, fileData.url)
-        const absolutePathToFile = path.resolve(process.cwd(), relativePathToFile)
+        const publicDir = strapi.dirs.static.public
+        const relativePathToFile = path.join(publicDir, fileData.url)
+        const absolutePathToFile = path.resolve(strapi.dirs.app.root, relativePathToFile)
         fileData.getStreamAsync = async () => fs.createReadStream(absolutePathToFile)
     } else {
         throw new UnsupportedURL(fileData.url)
@@ -90,7 +91,7 @@ class TumbnailGenerator extends AbstractGenerator {
                 await uploadProvider.upload(thumbnailFile)
                 _.set(_fileData, 'formats.thumbnail', thumbnailFile)
             } catch (error: any) {
-                strapi.log.warn('Failed to upload thumbnail image format:', error)
+                logger.warn('Failed to upload thumbnail image format:', error)
             }
         }
 
@@ -100,7 +101,7 @@ class TumbnailGenerator extends AbstractGenerator {
                 await uploadProvider.upload(file)
                 _.set(_fileData, ['formats', key], file)
             } catch (error: any) {
-                strapi.log.warn(`Failed to upload ${key} image format:`, error)
+                logger.warn(`Failed to upload ${key} image format:`, error)
             }
         }
 
