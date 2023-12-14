@@ -13,7 +13,6 @@ To make the most of the Strapi Media Preview plugin, ensure that your Strapi ver
 To install the plugin, use the following npm command:
 
 ```bash
-Copy code
 npm install @isneezy/strapi-media-preview
 ```
 
@@ -21,15 +20,11 @@ npm install @isneezy/strapi-media-preview
 
 # Features
 
-**Automatic Thumbnails:** Effortlessly generate thumbnails for supported files upon upload.
-
-**Automatic Responsive Formats:** Create responsive image formats (small, medium, large) for supported files upon upload, enhancing the visual presentation of your media.
-
-**Enhanced Content Creation:** Streamline your content creation process by incorporating visually appealing media previews into your Strapi CMS.
-
-**Easy Integration:** Seamlessly integrate the @isneezy/strapi-media-preview plugin into your existing Strapi CMS setup, ensuring a smooth and hassle-free experience.
-
-**Migration on Startup:** The plugin automatically generates missing thumbnails and responsive formats during startup, ensuring that your media library remains up-to-date with the latest enhancements. This migration feature adds convenience and efficiency to your media management tasks.
+- **Automatic Thumbnails:** Effortlessly generate thumbnails for supported files upon upload.
+- **Automatic Responsive Formats:** Create responsive image formats (small, medium, large) for supported files upon upload, enhancing the visual presentation of your media.
+- **Enhanced Content Creation:** Streamline your content creation process by incorporating visually appealing media previews into your Strapi CMS.
+- **Easy Integration:** Seamlessly integrate the @isneezy/strapi-media-preview plugin into your existing Strapi CMS setup, ensuring a smooth and hassle-free experience.
+- **Migration on Startup:** The plugin automatically generates missing thumbnails and responsive formats during startup, ensuring that your media library remains up-to-date with the latest enhancements. This migration feature adds convenience and efficiency to your media management tasks.
 
 ## Supported Formats
 
